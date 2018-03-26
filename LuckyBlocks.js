@@ -78,7 +78,7 @@ function destroyBlock(x, y, z, side){
             }
             if(chance >= 300){
                 clientMessage("§l§1Sonic!!");
-                ModPE.setGameSpeed(10);
+                ModPE.setGameSpeed(100);
                 return;
             }
             if(chance >= 250){
@@ -91,7 +91,7 @@ function destroyBlock(x, y, z, side){
                 return;
             }
             if(chance >= 200){
-                clientMessage("§4Ha, get debuffed noob");¡
+                clientMessage("§4Ha, get debuffed noob");
                 Entity.addEffect(Player.getEntity(), 2, 200, 2, false, true);
                 Entity.addEffect(Player.getEntity(), 4, 200, 2, false, true);
                 Entity.addEffect(Player.getEntity(), 9, 200, 2, false, true);
@@ -142,8 +142,8 @@ function destroyBlock(x, y, z, side){
             }
             if(chance >= 0){
                 clientMessage("§cMind your step");
-                Level.seTile(playerX, 256, playerZ, 2);
-                Entity.setPosition(Player.getEntity(), playerX, 258, playerZ);
+                Level.setTile(playerX, 150, playerZ, 2);
+                Entity.setPosition(Player.getEntity(), playerX + 0.5, 153.5, playerZ + 0.5);
                 return;
             }
             break;

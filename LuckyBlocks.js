@@ -224,7 +224,7 @@ function good(x, y, z){
     Level.setTile(x, y - 1, z, 57);
     Level.setTile(x, y, z, 57);
     Level.setTile(x, y + 1, z, 57);
-    Entity.setPosition(Player.getEntity(), x, y + 3, z); // BUG: Teleporting is little glitchy
+    Entity.setPosition(Player.getEntity(), x + 0.5, y + 3, z + 0.5);
 }
 
 /*
@@ -236,5 +236,5 @@ function good(x, y, z){
 function island(x, z){
     clientMessage("§cMind your step");
     Level.setTile(x, 150, z, 2);
-    Entity.setPosition(Player.getEntity(), x, 153, z); // BUG: Teleporting is little glitchy
+    Entity.setPosition(Player.getEntity(), x + 0.5, 153, z + 0.5);
 }
